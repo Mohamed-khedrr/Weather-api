@@ -1,0 +1,104 @@
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+nav ul a {
+  margin: 0 5px;
+  padding: 0 30px !important;
+  border: solid 2px transparent !important;
+  color: white !important;
+}
+
+nav ul a:hover {
+  border: solid 2px #009ad8 !important;
+  color: #009ad8 !important;
+  transition: 0.5s !important;
+}
+nav small {
+  font-size: 10px !important;
+}
+.bg-img {
+  background-image: url("../wix-img/Weather2.png");
+  background-repeat: no-repeat;
+}
+
+#find {
+  width: 90%;
+  height: 50px;
+}
+#find input {
+  border: 0;
+  outline: 0;
+  width: 90%;
+}
+#find div {
+  width: 10%;
+}
+
+.home #data {
+  width: 90% !important;
+  margin: auto;
+}
+
+.home #data #today {
+  background-color: #2d303d;
+  border-radius: 3% 0 0 3%;
+}
+
+.home #data #today .details {
+  background-color: #323544;
+  border-radius: 0% 0 0 3%;
+}
+
+/* ======================== */
+
+#second-day {
+  background-color: #262936;
+  /*  */
+}
+#second-day .top {
+  background-color: #222530;
+}
+
+/* ==================== */
+
+#third-day {
+  background-color: #323544;
+  border-radius: 0 3% 3% 0;
+}
+#third-day .top {
+  background-color: #2d303d;
+  border-radius: 0 10% 0 0;
+}
+#third-day .details {
+  border-radius: 0 0 3% 0;
+}
+
+#today h2 {
+  font-size: 90px;
+  font-weight: 700;
+}
+
+/* =================== */
+footer {
+  background-color: #262936;
+}
+.content {
+  width: fit-content;
+}
+
+footer input {
+  border: 0;
+  outline: 0;
+  width: 500px;
+}
+
+footer #last-input {
+  width: fit-content;
+}
+footer button {
+  width: 100px;
+}
+footer a {
+  text-decoration: none;
+}
