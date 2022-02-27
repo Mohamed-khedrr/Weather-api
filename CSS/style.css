@@ -29,7 +29,7 @@ nav small {
 #find input {
   border: 0;
   outline: 0;
-  width: 90%;
+  width: 80%;
 }
 #find div {
   width: 10%;
@@ -83,22 +83,7 @@ nav small {
 footer {
   background-color: #262936;
 }
-.content {
-  width: fit-content;
-}
 
-footer input {
-  border: 0;
-  outline: 0;
-  width: 500px;
-}
-
-footer #last-input {
-  width: fit-content;
-}
-footer button {
-  width: 100px;
-}
 footer a {
   text-decoration: none;
 }
