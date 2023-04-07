@@ -1,154 +1,138 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Poppins:wght@500;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="CSS/all.min.css" />
-    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
-    <link rel="stylesheet" href="CSS/style.css" />
-  </head>
-  <body>
-    <!-- =============  nav ============= -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 py-2">
-      <a class="navbar-brand" href="#">
-        <div class="d-flex">
-          <div>
-            <img src="wix-img/Weather1.png" alt="" />
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Poppins:wght@500;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/all.min.css" />
+  <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+  <!-- =============  nav ============= -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 py-2">
+    <a class="navbar-brand" href="#">
+      <div class="d-flex">
+        <div>
+          <img src="wix-img/Weather1.png" alt="" />
+        </div>
+        <div class="mx-3">
+          <h6>Weather</h6>
+          <small>tagline goes here</small>
+        </div>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+          <a class="nav-link rounded-pill" href="#">Home <span class="sr-only"></span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link rounded-pill" href="#">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded-pill" href="#">Live cameras</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded-pill" href="#">Photos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded-pill" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- =============  Home  ============= -->
+  <section class="home bg-dark text-white pb-4">
+    <div class="bg-img overflow-auto">
+      <div id="find" class="input-group mb-3 mx-auto mt-5 bg-dark rounded-pill">
+        <input id="search" type="text" class="bg-transparent text-white rounded-pill h-100 p-4"
+          placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+        <div class="input-group-append">
+          <button id="search-button" class="btn btn-primary text-white rounded-pill h-100 position-absolute end-0"
+            type="button">
+            Button
+          </button>
+        </div>
+      </div>
+      <!-- =========  data  ========== -->
+      <div id="data" class="my-5">
+        <div class="row">
+          <div id="today" class="col-md-4 p-0">
+            <div class="top d-flex justify-content-between px-2 pt-2">
+              <p id="day">Monday</p>
+              <p id="date">25Januaary</p>
+            </div>
+            <div class="details p-4">
+              <p id="location"></p>
+              <div class="d-flex align-items-center">
+                <h2 id="today-temp">16°C</h2>
+                <div class="content"><img id="today-icon" /></div>
+              </div>
+              <p id="today-text" class="text-info">Partly Cloud</p>
+            </div>
           </div>
-          <div class="mx-3">
-            <h6>Weather</h6>
-            <small>tagline goes here</small>
+          <!-- ================ -->
+          <div id="second-day" class="col-md-4 p-0">
+            <div class="top d-flex justify-content-center px-2 pt-2">
+              <p id="sec-day">Monday</p>
+            </div>
+            <div class="details p-4 text-center">
+              <img class="mb-3" id="sec-day-icon" />
+              <h3 id="sec-max-temp">21.7</h3>
+              <p id="sec-min-temp">11</p>
+              <p id="sec-day-text" class="text-info">Partly Cloud</p>
+            </div>
+          </div>
+          <!-- ========= -->
+          <div id="third-day" class="col-md-4 p-0">
+            <div class="top d-flex justify-content-center px-2 pt-2">
+              <p id="third"></p>
+            </div>
+            <div class="details p-4 text-center">
+              <img class="mb-3" id="third-day-icon" />
+              <h3 id="third-max-temp">21.7</h3>
+              <p id="third-min-temp">11</p>
+              <p id="third-day-text" class="text-info">Partly Cloud</p>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================== -->
+  <footer class="p-5 d-flex align-items-center justify-content-evenly">
+    <p class="text-white">
+      Copyright 2021 Company name. Designed by Mohamed Khedr
+    </p>
+
+    <div class="icons text-info me-4 text-info text-center">
+      <a href="#">
+        <i class="fab fa-2x fa-facebook mx-2 text-info"></i>
       </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item active">
-            <a class="nav-link rounded-pill" href="#"
-              >Home <span class="sr-only"></span
-            ></a>
-          </li>
+      <a href="#"> <i class="fab fa-twitter fa-2x mx-2 text-info"></i></a>
+      <a href="#"><i class="fab fa-instagram fa-2x mx-2 text-info"></i> </a>
+      <a href="#"><i class="fab fa-google fa-2x mx-2 text-info"></i> </a>
+    </div>
+  </footer>
 
-          <li class="nav-item">
-            <a class="nav-link rounded-pill" href="#">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link rounded-pill" href="#">Live cameras</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link rounded-pill" href="#">Photos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link rounded-pill" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- =============  Home  ============= -->
-    <section class="home bg-dark text-white pb-4">
-      <div class="bg-img overflow-auto">
-        <div
-          id="find"
-          class="input-group mb-3 mx-auto mt-5 bg-dark rounded-pill"
-        >
-          <input
-            id="search"
-            type="text"
-            class="bg-transparent text-white rounded-pill h-100 p-4"
-            placeholder="Recipient's username"
-            aria-label="Recipient's username"
-            aria-describedby="basic-addon2"
-          />
-          <div class="input-group-append">
-            <button
-              id="search-button"
-              class="btn btn-primary text-white rounded-pill h-100 position-absolute end-0"
-              type="button"
-            >
-              Button
-            </button>
-          </div>
-        </div>
-        <!-- =========  data  ========== -->
-        <div id="data" class="my-5">
-          <div class="row">
-            <div id="today" class="col-md-4 p-0">
-              <div class="top d-flex justify-content-between px-2 pt-2">
-                <p id="day">Monday</p>
-                <p id="date">25Januaary</p>
-              </div>
-              <div class="details p-4">
-                <p id="location"></p>
-                <div class="d-flex align-items-center">
-                  <h2 id="today-temp">16°C</h2>
-                  <div class="content"><img id="today-icon" /></div>
-                </div>
-                <p id="today-text" class="text-info">Partly Cloud</p>
-              </div>
-            </div>
-            <!-- ================ -->
-            <div id="second-day" class="col-md-4 p-0">
-              <div class="top d-flex justify-content-center px-2 pt-2">
-                <p id="sec-day">Monday</p>
-              </div>
-              <div class="details p-4 text-center">
-                <img class="mb-3" id="sec-day-icon" />
-                <h3 id="sec-max-temp">21.7</h3>
-                <p id="sec-min-temp">11</p>
-                <p id="sec-day-text" class="text-info">Partly Cloud</p>
-              </div>
-            </div>
-            <!-- ========= -->
-            <div id="third-day" class="col-md-4 p-0">
-              <div class="top d-flex justify-content-center px-2 pt-2">
-                <p id="third"></p>
-              </div>
-              <div class="details p-4 text-center">
-                <img class="mb-3" id="third-day-icon" />
-                <h3 id="third-max-temp">21.7</h3>
-                <p id="third-min-temp">11</p>
-                <p id="third-day-text" class="text-info">Partly Cloud</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- **********  JS ********** -->
+  <script src="JS/bootstrap.bundle.js"></script>
+  <script src="JS/main.js"></script>
+</body>
 
-    <!-- ====================================== -->
-    <footer class="p-5 d-flex align-items-center justify-content-evenly">
-      <p class="text-white">
-        Copyright 2021 Company name. Designed by Mohamed Khedr
-      </p>
-
-      <div class="icons text-info me-4 text-info text-center">
-        <a href="#">
-          <i class="fab fa-2x fa-facebook mx-2 text-info"></i>
-        </a>
-
-        <a href="#"> <i class="fab fa-twitter fa-2x mx-2 text-info"></i></a>
-        <a href="#"><i class="fab fa-instagram fa-2x mx-2 text-info"></i> </a>
-        <a href="#"><i class="fab fa-google fa-2x mx-2 text-info"></i> </a>
-      </div>
-    </footer>
-
-    <!-- **********  JS ********** -->
-    <script src="JS/bootstrap.bundle.js"></script>
-    <script src="JS/main.js"></script>
-  </body>
 </html>
